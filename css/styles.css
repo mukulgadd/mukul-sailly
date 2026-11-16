@@ -2425,3 +2425,12 @@ body.envelope-locked {
   
   transform-origin: left center;
 }
+
+/* Gallery real photos */
+.i-gallery__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}

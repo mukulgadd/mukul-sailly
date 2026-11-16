@@ -30,6 +30,13 @@
       function openEnvelope() {
         seal.removeEventListener('click', openEnvelope);
 
+        /* Start background music on first interaction */
+        var bgMusic = document.getElementById('bg-music');
+        if (bgMusic) {
+          bgMusic.volume = 0.4;
+          bgMusic.play().catch(function() {});
+        }
+
         /* Stage 1 (0-300ms): Seal pulse with golden glow */
         seal.classList.add('is-pulsing');
 
@@ -477,8 +484,17 @@
       var btn = document.querySelector('.bottom-nav__music-btn');
       if (!btn) return;
 
+      var audio = document.getElementById('bg-music');
       btn.addEventListener('click', function () {
-        btn.classList.toggle('is-paused');
+        if (audio) {
+          if (audio.paused) {
+            audio.play().catch(function() {});
+            btn.classList.remove('is-paused');
+          } else {
+            audio.pause();
+            btn.classList.add('is-paused');
+          }
+        }
       });
     } catch (e) {
       console.warn('[MusicToggle]', e);
