@@ -1,0 +1,20 @@
+{
+  "project_type": "Static single-page website — vanilla HTML5, CSS3, JavaScript. No frameworks, no bundler.",
+  "language": "HTML / CSS / JavaScript",
+  "build_system": "None — static files served directly. Open index.html in a browser.",
+  "test_framework": "Manual browser verification. No automated test runner.",
+  "build_command": "N/A — no build step. Files are served as-is.",
+  "test_command": "Open index.html in a browser and visually verify each section renders, animations trigger on scroll, countdown ticks, scratch card responds to mouse/touch.",
+  "verification_instructions": "1. Open /Users/mukul.gaddhyan/Git/shadhi/card1/index.html in a browser. 2. Verify all 12 sections render in order with correct text content. 3. Scroll down and confirm fade-in/slide-up animations trigger via Intersection Observer. 4. Verify countdown timer ticks every second targeting Feb 19 2027 11:40 PM IST. 5. Test scratch card canvas — mouse drag on desktop should reveal content. 6. Check responsive layout by resizing to 375px, 768px, 1024px widths. 7. Confirm decorative dividers appear between sections (CSS/SVG, no broken images). 8. Verify music toggle button is visible (visual only). 9. Confirm smooth scroll works if any anchor links are present. 10. Confirm loader animation shows briefly then content appears.",
+  "snapshot_or_generated_files": null,
+  "environment_constraints": "No dev server required. Static files only. Google Fonts loaded via CDN link in HTML head. No external JS dependencies. All decorative elements must be CSS or inline SVG — no external image file dependencies for ornaments.",
+  "contribution_requirements": "No AGENTS.md or CONTRIBUTING.md exists. Greenfield project.",
+  "key_patterns": "Mobile-first CSS with base styles targeting ~375-480px. CSS custom properties for theme colors. clamp() for fluid typography. CSS Grid + Flexbox for layout. Intersection Observer for scroll-triggered animations. HTML5 Canvas API for scratch card with both mouse and touch event handlers. setInterval for countdown. requestAnimationFrame-friendly parallax. Breakpoints at 480px, 768px, 1024px.",
+  "relevant_files": [
+    "/Users/mukul.gaddhyan/Git/shadhi/card1/index.html",
+    "/Users/mukul.gaddhyan/Git/shadhi/card1/css/styles.css",
+    "/Users/mukul.gaddhyan/Git/shadhi/card1/js/script.js",
+    "/Users/mukul.gaddhyan/Git/shadhi/card1/assets/"
+  ],
+  "directory_structure": "/Users/mukul.gaddhyan/Git/shadhi/card1/ — project root. index.html at root. css/styles.css for all styles. js/script.js for all JavaScript. assets/ folder as placeholder for future images."
+}

@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story — Mukul & Sailly 💕</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fdf8f5;
+            color: #3d2c2c;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(180deg, #fdf8f5 0%, #fff5f0 100%);
+            padding: 2rem;
+            position: relative;
+        }
+
+        .hero-logo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 8px 30px rgba(180, 130, 80, 0.15);
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            color: #b8860b;
+            margin-bottom: 0.5rem;
+            animation: fadeInDown 1s ease 0.2s both;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: #6b7280;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            animation: fadeInDown 1s ease 0.4s both;
+        }
+
+        .scroll-hint {
+            animation: bounce 2s infinite, fadeInDown 1s ease 0.6s both;
+            font-size: 1.5rem;
+            color: #b8860b;
+            cursor: pointer;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Timeline */
+        .timeline-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #b8860b;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #b8860b, #d4a017, #b8860b);
+            border-radius: 3px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -32px;
+            top: 8px;
+            width: 14px;
+            height: 14px;
+            background: #b8860b;
+            border-radius: 50%;
+            border: 3px solid #fdf8f5;
+            box-shadow: 0 0 0 3px #b8860b;
+        }
+
+        .timeline-date {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #b8860b;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-card {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(184, 134, 11, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .timeline-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(184, 134, 11, 0.12);
+        }
+
+        .timeline-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #4a1942;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-card p {
+            font-size: 0.95rem;
+            color: #5a5a5a;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .timeline-emoji {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* Letter Section */
+        .letter-section {
+            background: linear-gradient(180deg, #fff5f0 0%, #fdf8f5 100%);
+            padding: 4rem 2rem;
+        }
+
+        .letter-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .letter-card {
+            background: #fffef9;
+            border-radius: 20px;
+            padding: 3rem 2.5rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(184, 134, 11, 0.12);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .letter-card::before {
+            content: '💌';
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            font-size: 3rem;
+            opacity: 0.3;
+        }
+
+        .letter-greeting {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            color: #b8860b;
+            margin-bottom: 1.5rem;
+        }
+
+        .letter-body {
+            font-size: 0.95rem;
+            line-height: 2;
+            color: #4a4a4a;
+            font-weight: 300;
+        }
+
+        .letter-body p {
+            margin-bottom: 1.2rem;
+        }
+
+        .letter-body .highlight {
+            background: linear-gradient(180deg, transparent 60%, rgba(184, 134, 11, 0.15) 60%);
+            padding: 0 2px;
+            font-weight: 400;
+        }
+
+        .letter-body .quote-block {
+            background: linear-gradient(135deg, #fdf8f5, #fff5f0);
+            border-left: 3px solid #b8860b;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 12px 12px 0;
+            font-style: italic;
+            color: #5a4a3a;
+        }
+
+        .letter-sign {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            color: #b8860b;
+            margin-top: 2rem;
+            text-align: right;
+        }
+
+        /* Qualities Section */
+        .qualities-section {
+            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .qualities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .quality-card {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(184, 134, 11, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .quality-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .quality-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(184, 134, 11, 0.1);
+        }
+
+        .quality-emoji {
+            font-size: 2.5rem;
+            margin-bottom: 0.8rem;
+            display: block;
+        }
+
+        .quality-title {
+            font-weight: 600;
+            color: #4a1942;
+            font-size: 0.95rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .quality-desc {
+            font-size: 0.85rem;
+            color: #6b7280;
+            font-weight: 300;
+        }
+
+        /* Couple Image Section */
+        .couple-section {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(180deg, #fdf8f5 0%, #fff5f0 100%);
+        }
+
+        .couple-img {
+            width: 280px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .couple-caption {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            color: #b8860b;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: #4a1942;
+            color: white;
+        }
+
+        .footer-names {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: #d4a017;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-text {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 300;
+        }
+
+        .footer-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.8rem 2rem;
+            background: linear-gradient(135deg, #b8860b, #d4a017);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: transform 0.2s ease;
+        }
+
+        .footer-link:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .letter-card {
+                padding: 2rem 1.5rem;
+            }
+            .timeline {
+                padding-left: 30px;
+            }
+            .couple-img {
+                width: 220px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero -->
+    <section class="hero">
+        <img src="assets/logo.png" alt="Mukul & Sailly" class="hero-logo">
+        <h1 class="hero-title">Our Story</h1>
+        <p class="hero-subtitle">How Shyam Baba wrote the most unexpected love story</p>
+        <div class="scroll-hint" onclick="document.querySelector('.timeline-section').scrollIntoView({behavior:'smooth'})">↓</div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="timeline-section">
+        <h2 class="section-title">The Timeline ✨</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">The Beginning</div>
+                <div class="timeline-card">
+                    <span class="timeline-emoji">📱</span>
+                    <h3>Connected on Jeevansathi</h3>
+                    <p>We first connected, talked for a few days… and then life happened. Both got busy, said we'd talk later, and somehow both forgot. The story paused — but it didn't end.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">The Plot Twist</div>
+                <div class="timeline-card">
+                    <span class="timeline-emoji">🪄</span>
+                    <h3>Shyam Baba's Little Push</h3>
+                    <p>Out of all the ways things could happen, Sailly's family got Mukul's biodata from somewhere else entirely. And suddenly, she remembered him again. A spiritual nudge saying — "Arre bhai, tum dono ko phir se baat karni chahiye." 😄</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">23rd April</div>
+                <div class="timeline-card">
+                    <span class="timeline-emoji">💬</span>
+                    <h3>Things Started Changing</h3>
+                    <p>The conversations began again. Chatting, getting to know each other, slowly building something beautiful without even realizing it.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">5th May</div>
+                <div class="timeline-card">
+                    <span class="timeline-emoji">☕</span>
+                    <h3>First Meeting — Centrum Mall</h3>
+                    <p>The first time Mukul heard Sailly's voice was when he called to ask "Reached?" — and even that small moment feels special now. Sometimes the simplest things become the most memorable.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">11th May 2026</div>
+                <div class="timeline-card">
+                    <span class="timeline-emoji">💍</span>
+                    <h3>Engaged!</h3>
+                    <p>Everything moved so beautifully and quickly. Sometimes Mukul still pauses and thinks… wow, this really happened. From a forgotten chat to forever — in the most unexpected way.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">30th November 2026</div>
+                <div class="timeline-card">
+                    <span class="timeline-emoji">💒</span>
+                    <h3>The Wedding!</h3>
+                    <p>The next chapter begins. Two people who were brought together by fate (and Shyam Baba's impeccable timing) finally becoming one. Forever & Always.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualities -->
+    <section class="qualities-section">
+        <h2 class="section-title">Why She's Special 💖</h2>
+        <div class="qualities-grid">
+            <div class="quality-card">
+                <span class="quality-emoji">🧠</span>
+                <p class="quality-title">Remembers Small Things</p>
+                <p class="quality-desc">The tiny details that most people miss</p>
+            </div>
+            <div class="quality-card">
+                <span class="quality-emoji">🤗</span>
+                <p class="quality-title">Cares Deeply</p>
+                <p class="quality-desc">In the most natural, effortless way</p>
+            </div>
+            <div class="quality-card">
+                <span class="quality-emoji">🏠</span>
+                <p class="quality-title">Values Family</p>
+                <p class="quality-desc">Already bonding with Maa, Didi & Bhabhi</p>
+            </div>
+            <div class="quality-card">
+                <span class="quality-emoji">☮️</span>
+                <p class="quality-title">My Peace</p>
+                <p class="quality-desc">In a noisy world, she feels calm</p>
+            </div>
+            <div class="quality-card">
+                <span class="quality-emoji">🍮</span>
+                <p class="quality-title">Rasmalai Cheeks</p>
+                <p class="quality-desc">Officially certified. No arguments accepted.</p>
+            </div>
+            <div class="quality-card">
+                <span class="quality-emoji">🙏</span>
+                <p class="quality-title">Shyam Baba's Prasad</p>
+                <p class="quality-desc">Given with love, received with gratitude</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Letter Section -->
+    <section class="letter-section">
+        <div class="letter-container">
+            <h2 class="section-title">A Letter For You 💌</h2>
+            <div class="letter-card">
+                <p class="letter-greeting">My Soon-to-Be Wife, ❤️</p>
+                <div class="letter-body">
+                    <p>I never thought I would sit down and write a handwritten letter, but then again, I also never thought our story would happen this way.</p>
+
+                    <p>Sometimes I genuinely feel that <span class="highlight">Shyam Baba writes stories in the most unexpected ways.</span></p>
+
+                    <p>There are many things I admire about you, but what touches my heart the most is the kind of person you are. The way you remember small things, the way you care, the way you adjust so naturally, and most importantly, the way you value family.</p>
+
+                    <p>And I want to tell you something honestly — <span class="highlight">talking to you feels peaceful.</span> In a world where everything feels rushed and noisy, you somehow feel calm. Maybe that is why I secretly like calling you my peace.</p>
+
+                    <div class="quote-block">
+                        "Prasad mein dosh nahi dekha jaata, usse shraddha aur prem se grahan kiya jaata hai."
+                    </div>
+
+                    <p>So maybe neither of us will be perfect — because we are human after all — but I want to try my best to focus more on the person than the flaws. To understand more, judge less, and remind myself that something given by Baba deserves gratitude first.</p>
+
+                    <p>Also, I have one serious complaint. I still don't understand how someone's cheeks can look so much like rasmalai 😄 And before you say anything — yes, I still stand by my statement. 😂</p>
+
+                    <p>We are still at the beginning of our story, still learning each other, still slowly falling in love — and I think <span class="highlight">that is the beautiful part.</span> No rushing, no drama, just two people slowly becoming each other's comfort.</p>
+
+                    <p>I don't know what all is written ahead for us, but I do know one thing — I feel grateful. Grateful that life gave us another chance to reconnect, grateful for this unexpected journey, and grateful for you.</p>
+
+                    <p>Maybe this was always Shyam Baba's plan. 🙏</p>
+                </div>
+                <p class="letter-sign">Yours (officially and spiritually approved by Shyam Baba 😌),<br>Mukul</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Couple Image -->
+    <section class="couple-section">
+        <img src="assets/couple.png" alt="Mukul & Sailly" class="couple-img">
+        <p class="couple-caption">Forever & Always 💕</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-names">Mukul & Sailly</p>
+        <p class="footer-text">A love story written by Shyam Baba ✨</p>
+        <a href="index.html" class="footer-link">💍 The Proposal Page</a>
+    </footer>
+
+    <script>
+        // Scroll-triggered animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.timeline-item, .quality-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

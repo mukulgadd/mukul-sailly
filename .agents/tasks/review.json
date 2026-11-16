@@ -1,0 +1,7 @@
+{
+  "verdict": "APPROVED",
+  "findings": [
+    "Unreferenced cover-poster.webp — The file exists in assets/images/ (80 KB) but is never referenced in index.html or CSS. Remove it or use it to avoid shipping a dead asset. (confirmed, non-blocking)"
+  ],
+  "reviewDoc": "/Users/mukul.gaddhyan/Git/shadhi/card1/.agents/tasks/review-doc.md"
+}

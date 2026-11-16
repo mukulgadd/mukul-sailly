@@ -1,0 +1,59 @@
+{
+  "project_type": "Static single-page wedding invitation website — vanilla HTML5, CSS3, JavaScript. No frameworks, no bundler.",
+  "language": "HTML / CSS / JavaScript",
+  "build_system": "None — static files served directly. Open index.html in a browser or via Playwright MCP.",
+  "test_framework": "Manual visual verification via Playwright MCP browser tools. No automated test runner.",
+  "build_command": "N/A — no build step.",
+  "test_command": "Use Playwright MCP to open file:///Users/mukul.gaddhyan/Git/shadhi/card1/index.html and visually verify.",
+  "verification_instructions": "1. Use Playwright browser_navigate to open file:///Users/mukul.gaddhyan/Git/shadhi/card1/index.html. 2. Take screenshots at 375px width (mobile), 768px (tablet), 1024px (desktop) using browser_resize + browser_take_screenshot. 3. Open the reference site https://sadarnimantran.in/invite/arjun-meera at same widths for comparison. 4. Verify all 10 sections render in order with correct text content. 5. Confirm jhalar scalloped edges appear between section transitions. 6. Verify scroll animations trigger. 7. Test scratch card interaction. 8. Confirm countdown timer ticks. 9. Verify RSVP WhatsApp URL builder works. 10. Check browser_console_messages for JS errors.",
+  "snapshot_or_generated_files": null,
+  "environment_constraints": "No dev server. Static files only. Google Fonts loaded via CDN. Playwright MCP is configured at ~/.kiro/settings/mcp.json for browser-based visual verification. All worktree paths are absolute under /Users/mukul.gaddhyan/Git/shadhi/card1/ — relative paths in tool calls will resolve against the parent workspace, not the project.",
+  "contribution_requirements": "No AGENTS.md or CONTRIBUTING.md. Greenfield project. Commit locally on current branch, never push.",
+  "key_patterns": "Mobile-first CSS with container queries (container-type: inline-size). CSS custom properties prefixed --i- for theme. clamp() for fluid typography. 100svh for hero height. Scalloped jhalar edges via repeating radial-gradient between sections. Reveal animations using --reveal-y and --reveal-offset custom properties. Gold foil gradient: linear-gradient(to bottom right,#8a6a2c,#d9b866,#a98238,#f3e2a8,#9a7633). SVG decorative elements inline in HTML (mandalas, corner ornaments, heart dividers, diya lamps). Canvas API with SVG heart clip-path for scratch cards.",
+  "relevant_files": [
+    "/Users/mukul.gaddhyan/Git/shadhi/card1/index.html — FULL REWRITE",
+    "/Users/mukul.gaddhyan/Git/shadhi/card1/css/styles.css — FULL REWRITE",
+    "/Users/mukul.gaddhyan/Git/shadhi/card1/js/script.js — FULL REWRITE",
+    "/Users/mukul.gaddhyan/Git/shadhi/card1/assets/images/cover-poster.webp — 720x1280 hero bg poster",
+    "/Users/mukul.gaddhyan/Git/shadhi/card1/assets/images/couple-640.webp — 640x1137 blurred bg layer",
+    "/Users/mukul.gaddhyan/Git/shadhi/card1/assets/images/couple.webp — 433x770 foreground couple photo",
+    "/Users/mukul.gaddhyan/Git/shadhi/card1/assets/images/ganesh.webp — 400x415 deity image",
+    "/Users/mukul.gaddhyan/Git/shadhi/card1/assets/images/haldi-800.webp — watercolor event art",
+    "/Users/mukul.gaddhyan/Git/shadhi/card1/assets/images/mehndi-800.webp — watercolor event art",
+    "/Users/mukul.gaddhyan/Git/shadhi/card1/assets/images/baraat-800.webp — watercolor event art"
+  ],
+  "directory_structure": "/Users/mukul.gaddhyan/Git/shadhi/card1/ — project root. index.html at root. css/styles.css for all styles. js/script.js for all JS. assets/images/ has 7 webp images already downloaded from reference site.",
+  "fonts": {
+    "Great Vibes": "Couple names (Arjun/Meera) — large cursive script",
+    "Cormorant Garamond": "Headings, 'weds', section headers, uppercase labels — wght 300;400;500;600;700, ital",
+    "Anek Devanagari": "Hindi/Sanskrit text (Ganesh mantra, etc.)",
+    "Anek Latin": "Body text — wght 400;500",
+    "Kalam": "Handwritten notes (Our Story descriptions, family quote card)"
+  },
+  "color_palette": {
+    "--i-bg": "#f7f5ef",
+    "--i-bg2": "#f9faf7",
+    "--i-card": "#fbf8f2",
+    "--i-ink": "#2b0f14",
+    "--i-ink-soft": "#3d2420",
+    "--i-gold": "#a98238",
+    "--i-gold-dark": "#8a6a2c",
+    "--i-accent": "#6e0f1c",
+    "--i-stage": "#1a1510 (dark warm brownish for hero/closing)",
+    "--i-on-stage": "#fff",
+    "--i-line": "rgba(169,130,56,0.34)",
+    "gold_foil_gradient": "linear-gradient(to bottom right,#8a6a2c,#d9b866,#a98238,#f3e2a8,#9a7633)"
+  },
+  "section_order_in_dom": [
+    "1. Hero (#top) — full-screen, couple photos, staggered entrance",
+    "2. Card / Couple Intro (#card) — jhalar top, ganesh, couple details, blessings",
+    "3. Our Story (#our-story) — timeline with Kalam font descriptions",
+    "4. Save the Date + Countdown (#countdown) — scratch hearts, countdown timer",
+    "5. Events (#events) — watercolor art cards, dress code pills",
+    "6. Families (#family) — two family cards, handwritten quote, member lists",
+    "7. Gallery (#gallery) — 4 elegant placeholder cards",
+    "8. Venue (#venue) — map card, travel info",
+    "9. RSVP (#rsvp) — form with name/radios/textarea, WhatsApp URL builder",
+    "10. Closing (#closing) — dark bg, diya lamps, animated flames"
+  ]
+}

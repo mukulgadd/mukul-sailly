@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mukul weds Sailly — Wedding Invitation</title>
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts: Great Vibes, Cormorant Garamond, Anek Devanagari, Anek Latin, Kalam -->
+  <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@400;500;600;700&family=Anek+Latin:wght@400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Great+Vibes&family=Kalam:wght@300;400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Envelope Cover — full-bleed image with overlaid content -->
+  <div id="envelope-cover" class="envelope-cover">
+    <!-- Full-screen background image -->
+    <img src="assets/images/cover-poster.webp" alt="Mukul and Sailly" class="envelope-cover__bg">
+
+    <!-- All content overlaid on the image -->
+    <div class="envelope-cover__overlay">
+      <button class="envelope-cover__skip" id="envelope-skip">SKIP</button>
+
+      <!-- Decorative corners -->
+      <div class="envelope-cover__corner envelope-cover__corner--tl" aria-hidden="true">
+        <svg width="80" height="80" viewBox="0 0 80 80">
+          <path d="M4 76 C4 40 16 20 40 8 C28 16 20 28 16 44 Q14 56 8 64 C6 68 4 72 4 76Z" fill="none" stroke="var(--i-gold, #c9a84c)" stroke-width="1.2" opacity="0.7"/>
+          <path d="M10 68 C14 48 24 30 44 16" fill="none" stroke="var(--i-gold, #c9a84c)" stroke-width="0.8" opacity="0.5"/>
+          <circle cx="6" cy="74" r="2.5" fill="var(--i-gold, #c9a84c)" opacity="0.6"/>
+        </svg>
+      </div>
+      <div class="envelope-cover__corner envelope-cover__corner--tr" aria-hidden="true">
+        <svg width="80" height="80" viewBox="0 0 80 80">
+          <path d="M4 76 C4 40 16 20 40 8 C28 16 20 28 16 44 Q14 56 8 64 C6 68 4 72 4 76Z" fill="none" stroke="var(--i-gold, #c9a84c)" stroke-width="1.2" opacity="0.7"/>
+          <path d="M10 68 C14 48 24 30 44 16" fill="none" stroke="var(--i-gold, #c9a84c)" stroke-width="0.8" opacity="0.5"/>
+          <circle cx="6" cy="74" r="2.5" fill="var(--i-gold, #c9a84c)" opacity="0.6"/>
+        </svg>
+      </div>
+      <div class="envelope-cover__corner envelope-cover__corner--bl" aria-hidden="true">
+        <svg width="80" height="80" viewBox="0 0 80 80">
+          <path d="M4 76 C4 40 16 20 40 8 C28 16 20 28 16 44 Q14 56 8 64 C6 68 4 72 4 76Z" fill="none" stroke="var(--i-gold, #c9a84c)" stroke-width="1.2" opacity="0.7"/>
+          <path d="M10 68 C14 48 24 30 44 16" fill="none" stroke="var(--i-gold, #c9a84c)" stroke-width="0.8" opacity="0.5"/>
+          <circle cx="6" cy="74" r="2.5" fill="var(--i-gold, #c9a84c)" opacity="0.6"/>
+        </svg>
+      </div>
+      <div class="envelope-cover__corner envelope-cover__corner--br" aria-hidden="true">
+        <svg width="80" height="80" viewBox="0 0 80 80">
+          <path d="M4 76 C4 40 16 20 40 8 C28 16 20 28 16 44 Q14 56 8 64 C6 68 4 72 4 76Z" fill="none" stroke="var(--i-gold, #c9a84c)" stroke-width="1.2" opacity="0.7"/>
+          <path d="M10 68 C14 48 24 30 44 16" fill="none" stroke="var(--i-gold, #c9a84c)" stroke-width="0.8" opacity="0.5"/>
+          <circle cx="6" cy="74" r="2.5" fill="var(--i-gold, #c9a84c)" opacity="0.6"/>
+        </svg>
+      </div>
+
+      <!-- Initials -->
+      <p class="envelope-cover__initials">M <span>&amp;</span> S</p>
+
+      <!-- Invitation text -->
+      <p class="envelope-cover__text">You and your family are warmly invited</p>
+
+      <!-- Seal (on the image) -->
+      <button class="envelope-cover__seal" id="envelope-seal" aria-label="Open invitation">
+        <svg viewBox="0 0 80 74" width="80" height="74" aria-hidden="true">
+          <defs>
+            <linearGradient id="seal-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#8a6a2c" stop-opacity="0.5"/>
+              <stop offset="25%" stop-color="#d9b866" stop-opacity="0.5"/>
+              <stop offset="50%" stop-color="#c9a84c" stop-opacity="0.5"/>
+              <stop offset="75%" stop-color="#f3e2a8" stop-opacity="0.5"/>
+              <stop offset="100%" stop-color="#9a7633" stop-opacity="0.5"/>
+            </linearGradient>
+          </defs>
+          <path d="M40 68 C27 58 0 40 0 22 C0 8 12 0 22 3 C30 6 36 12 40 20 C44 12 50 6 58 3 C68 0 80 8 80 22 C80 40 53 58 40 68Z" fill="url(#seal-gold)"/>
+          <circle cx="40" cy="30" r="14" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.8"/>
+          <text x="40" y="35" text-anchor="middle" fill="rgba(128,0,32,0.6)" font-family="Cormorant Garamond, serif" font-size="13" font-weight="600">M &amp; S</text>
+        </svg>
+      </button>
+      <p class="envelope-cover__cta">Tap the seal to open</p>
+    </div>
+  </div>
+
+
+  <!-- Loader Overlay -->
+  <div id="loader" aria-live="polite" aria-label="Loading">
+    <div class="loader__ornament"></div>
+  </div>
+
+  <main>
+
+    <!-- ============================================================
+         SECTION 1: HERO
+    ============================================================= -->
+    <section id="top" class="i-hero">
+      <div class="i-hero__bg">
+        <img src="assets/images/couple-640.webp" alt="" class="i-hero__bg-blur">
+      </div>
+
+      <div class="i-hero__fg">
+        <div class="i-hero__glow"></div>
+        <img src="assets/images/couple.webp" alt="Mukul and Sailly" class="i-hero__couple">
+      </div>
+
+      <div class="i-hero__content">
+        <!-- Top group -->
+        <div class="i-hero__top reveal" style="--reveal-offset:0.35s">
+          <span aria-hidden="true" class="sn-ph-hair"></span>
+          <span class="i-hero__label">Shubh Vivah</span>
+          <span aria-hidden="true" class="sn-ph-hair is-r"></span>
+        </div>
+
+        <!-- Names -->
+        <div class="i-hero__names reveal" style="--reveal-offset:0.6s">
+          <span class="i-hero__name" style="width:140px;height:65px;display:inline-flex;align-items:center;justify-content:center;">Mukul</span>
+          <span data-in="true" class="sn-ph-join" style="--in: 0.6s;"><span aria-hidden="true" class="sn-ph-hair"></span><span class="i-hero__weds">weds</span><span aria-hidden="true" class="sn-ph-hair is-r"></span></span>
+          <span class="i-hero__name" style="width:120px;height:65px;display:inline-flex;align-items:center;justify-content:center;">Sailly</span>
+        </div>
+
+        <!-- Heart divider -->
+        <div class="i-hero__heart reveal" style="--reveal-offset:1.35s; display:flex; align-items:center; gap:0.5rem;">
+          <span aria-hidden="true" class="sn-ph-hair"></span>
+          <svg width="10" height="9" viewBox="0 0 60 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="gold-foil" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#8a6a2c"/>
+                <stop offset="25%" stop-color="#d9b866"/>
+                <stop offset="50%" stop-color="#a98238"/>
+                <stop offset="75%" stop-color="#f3e2a8"/>
+                <stop offset="100%" stop-color="#9a7633"/>
+              </linearGradient>
+            </defs>
+            <path d="M30 47 C20 40 0 28 0 16 C0 6 8 0 16 2 C22 4 27 9 30 14 C33 9 38 4 44 2 C52 0 60 6 60 16 C60 28 40 40 30 47Z" fill="url(#gold-foil)"/>
+          </svg>
+          <span aria-hidden="true" class="sn-ph-hair is-r"></span>
+        </div>
+
+        <!-- Place -->
+        <div class="i-hero__place reveal" style="--reveal-offset:1.5s">
+          <span>Purulia, West Bengal</span>
+        </div>
+
+        <!-- Invitation text -->
+        <p class="i-hero__invite reveal" style="--reveal-offset:2.45s">
+          You and your family are cordially invited
+        </p>
+
+
+      </div>
+
+      <!-- Scroll indicator — ISSUE 1 -->
+      <div class="i-hero__scroll reveal" style="--reveal-offset:3s">
+        <span>Scroll</span>
+        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M8 2 L8 12 M4 8 L8 12 L12 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Jhalar: hero (dark) → card (cream) -->
+    <div class="jhalar jhalar--stage"></div>
+
+    <!-- ============================================================
+         SECTION 2: CARD / COUPLE INTRO
+    ============================================================= -->
+    <section id="card" class="i-card">
+      <!-- Decorative mandalas (desktop only) -->
+      <svg class="i-card__mandala i-card__mandala--left" viewBox="0 0 300 300" aria-hidden="true">
+        <circle cx="150" cy="150" r="140" stroke="currentColor" fill="none" stroke-width="0.5"/>
+        <circle cx="150" cy="150" r="120" stroke="currentColor" fill="none" stroke-width="0.5"/>
+        <circle cx="150" cy="150" r="100" stroke="currentColor" fill="none" stroke-width="0.5"/>
+        <circle cx="150" cy="150" r="80" stroke="currentColor" fill="none" stroke-width="0.3"/>
+        <circle cx="150" cy="150" r="60" stroke="currentColor" fill="none" stroke-width="0.3"/>
+        <g stroke="currentColor" stroke-width="0.4" fill="none">
+          <line x1="150" y1="10" x2="150" y2="290"/>
+          <line x1="10" y1="150" x2="290" y2="150"/>
+          <line x1="45" y1="45" x2="255" y2="255"/>
+          <line x1="255" y1="45" x2="45" y2="255"/>
+          <line x1="150" y1="10" x2="255" y2="85" />
+          <line x1="150" y1="10" x2="45" y2="85"/>
+          <line x1="150" y1="290" x2="255" y2="215"/>
+          <line x1="150" y1="290" x2="45" y2="215"/>
+          <line x1="10" y1="150" x2="85" y2="45"/>
+          <line x1="10" y1="150" x2="85" y2="255"/>
+          <line x1="290" y1="150" x2="215" y2="45"/>
+          <line x1="290" y1="150" x2="215" y2="255"/>
+        </g>
+      </svg>
+      <svg class="i-card__mandala i-card__mandala--right" viewBox="0 0 300 300" aria-hidden="true">
+        <circle cx="150" cy="150" r="140" stroke="currentColor" fill="none" stroke-width="0.5"/>
+        <circle cx="150" cy="150" r="120" stroke="currentColor" fill="none" stroke-width="0.5"/>
+        <circle cx="150" cy="150" r="100" stroke="currentColor" fill="none" stroke-width="0.5"/>
+        <circle cx="150" cy="150" r="80" stroke="currentColor" fill="none" stroke-width="0.3"/>
+        <circle cx="150" cy="150" r="60" stroke="currentColor" fill="none" stroke-width="0.3"/>
+        <g stroke="currentColor" stroke-width="0.4" fill="none">
+          <line x1="150" y1="10" x2="150" y2="290"/>
+          <line x1="10" y1="150" x2="290" y2="150"/>
+          <line x1="45" y1="45" x2="255" y2="255"/>
+          <line x1="255" y1="45" x2="45" y2="255"/>
+          <line x1="150" y1="10" x2="255" y2="85"/>
+          <line x1="150" y1="10" x2="45" y2="85"/>
+          <line x1="150" y1="290" x2="255" y2="215"/>
+          <line x1="150" y1="290" x2="45" y2="215"/>
+          <line x1="10" y1="150" x2="85" y2="45"/>
+          <line x1="10" y1="150" x2="85" y2="255"/>
+          <line x1="290" y1="150" x2="215" y2="45"/>
+          <line x1="290" y1="150" x2="215" y2="255"/>
+        </g>
+      </svg>
+
+      <div class="i-card__inner reveal">
+        <!-- Corner ornaments — ISSUE 6: 48px -->
+        <svg class="i-card__corner i-card__corner--tl" width="48" height="48" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M2 38 C2 20 8 8 20 2 C14 10 10 18 10 28 C10 30 8 34 2 38Z" fill="none" stroke="url(#gold-foil)" stroke-width="0.8" class="draw-in" style="--path-len:120"/>
+          <path d="M6 34 C8 22 14 12 24 6" fill="none" stroke="url(#gold-foil)" stroke-width="0.5" class="draw-in" style="--path-len:60"/>
+          <circle cx="4" cy="36" r="1.5" fill="url(#gold-foil)"/>
+        </svg>
+        <svg class="i-card__corner i-card__corner--tr" width="48" height="48" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M2 38 C2 20 8 8 20 2 C14 10 10 18 10 28 C10 30 8 34 2 38Z" fill="none" stroke="url(#gold-foil)" stroke-width="0.8" class="draw-in" style="--path-len:120"/>
+          <path d="M6 34 C8 22 14 12 24 6" fill="none" stroke="url(#gold-foil)" stroke-width="0.5" class="draw-in" style="--path-len:60"/>
+          <circle cx="4" cy="36" r="1.5" fill="url(#gold-foil)"/>
+        </svg>
+        <svg class="i-card__corner i-card__corner--br" width="48" height="48" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M2 38 C2 20 8 8 20 2 C14 10 10 18 10 28 C10 30 8 34 2 38Z" fill="none" stroke="url(#gold-foil)" stroke-width="0.8" class="draw-in" style="--path-len:120"/>
+          <path d="M6 34 C8 22 14 12 24 6" fill="none" stroke="url(#gold-foil)" stroke-width="0.5" class="draw-in" style="--path-len:60"/>
+          <circle cx="4" cy="36" r="1.5" fill="url(#gold-foil)"/>
+        </svg>
+        <svg class="i-card__corner i-card__corner--bl" width="48" height="48" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M2 38 C2 20 8 8 20 2 C14 10 10 18 10 28 C10 30 8 34 2 38Z" fill="none" stroke="url(#gold-foil)" stroke-width="0.8" class="draw-in" style="--path-len:120"/>
+          <path d="M6 34 C8 22 14 12 24 6" fill="none" stroke="url(#gold-foil)" stroke-width="0.5" class="draw-in" style="--path-len:60"/>
+          <circle cx="4" cy="36" r="1.5" fill="url(#gold-foil)"/>
+        </svg>
+
+        <!-- Ganesh -->
+        <img src="assets/images/ganesh.webp" alt="Shri Ganesh" class="i-card__ganesh">
+
+        <!-- Mantra -->
+        <p class="i-card__mantra">॥ श्री गणेशाय नमः ॥</p>
+        <p class="i-card__sanskrit">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभा।<br>निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥</p>
+
+        <p class="i-card__blessings-intro">With the blessings of our elders and the love of our families</p>
+
+        <!-- Couple details -->
+        <div class="i-card__couple">
+          <div class="i-card__person">
+            <h2 class="i-card__name">Mukul</h2>
+            <p>Grandson of Late Smt. Anandi Devi<br>&amp; Late Shri Kampla Prasad Gaddhyan</p>
+            <p>Son of Smt. Meera<br>&amp; Shri Sanjay Gaddhyan</p>
+            <p class="i-card__city">Chirkunda, Dhanbad, Jharkhand</p>
+          </div>
+
+          <span data-in="true" class="sn-ph-join"><span aria-hidden="true" class="sn-ph-hair"></span><span class="i-card__weds">weds</span><span aria-hidden="true" class="sn-ph-hair is-r"></span></span>
+
+          <div class="i-card__person">
+            <h2 class="i-card__name">Sailly</h2>
+            <p>Granddaughter of Late Smt. Geeta Devi<br>&amp; Shri Omprakash Marodia</p>
+            <p>Daughter of Smt. Neelam<br>&amp; Shri Sanjay Kumar Marodia</p>
+            <p class="i-card__city">Raniganj, West Bengal</p>
+          </div>
+        </div>
+
+        <!-- Gold divider with heart -->
+        <div class="i-divider">
+          <span class="i-divider__line"></span>
+          <svg width="20" height="18" viewBox="0 0 20 18" aria-hidden="true">
+            <path d="M10 16 C7 13 0 8 0 4.5 C0 1.5 2.5 0 5 0.5 C7 1 9 3 10 5 C11 3 13 1 15 0.5 C17.5 0 20 1.5 20 4.5 C20 8 13 13 10 16Z" fill="url(#gold-foil)"/>
+          </svg>
+          <span class="i-divider__line"></span>
+        </div>
+
+        <!-- Elder blessings -->
+        <div class="i-card__elders">
+          <p class="i-card__elders-heading">With the blessings of</p>
+          <p class="i-card__elder-name">Late Smt. Anandi Devi Gaddhyan</p>
+          <p class="i-card__elder-name">Late Shri Kampla Prasad Gaddhyan</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 3: OUR STORY
+    ============================================================= -->
+    <section id="our-story" class="i-story">
+      <div class="i-story__header reveal">
+        <h2 class="section-title">Our Story</h2>
+        <div class="i-divider i-divider--sm">
+          <span class="i-divider__line"></span>
+          <svg width="20" height="18" viewBox="0 0 20 18" aria-hidden="true">
+            <path d="M10 16 C7 13 0 8 0 4.5 C0 1.5 2.5 0 5 0.5 C7 1 9 3 10 5 C11 3 13 1 15 0.5 C17.5 0 20 1.5 20 4.5 C20 8 13 13 10 16Z" fill="url(#gold-foil)"/>
+          </svg>
+          <span class="i-divider__line"></span>
+        </div>
+      </div>
+
+      <div class="i-timeline">
+        <div class="i-timeline__item reveal" style="--reveal-offset:0.1s">
+          <div class="i-timeline__dot"></div>
+          <div class="i-timeline__body">
+            <span class="i-timeline__date">Early 2026</span>
+            <h3>A Missed Connection</h3>
+            <p>We first connected online, talked for a few days… and then life happened. Both got busy, both forgot. The story paused — but it didn’t end.</p>
+          </div>
+        </div>
+
+        <div class="i-timeline__item reveal" style="--reveal-offset:0.2s">
+          <div class="i-timeline__dot"></div>
+          <div class="i-timeline__body">
+            <span class="i-timeline__date">April 2026</span>
+            <h3>Spiritual Little Push</h3>
+            <p>Through a completely different path, Sailly’s family received Mukul’s biodata again. She remembered. Some connections are simply meant to be found twice.</p>
+          </div>
+        </div>
+
+        <div class="i-timeline__item reveal" style="--reveal-offset:0.3s">
+          <div class="i-timeline__dot"></div>
+          <div class="i-timeline__body">
+            <span class="i-timeline__date">5 May 2026</span>
+            <h3>The First Meeting</h3>
+            <p>Centrum Mall. The first hello in person. Sometimes the simplest moments become the most memorable ones.</p>
+          </div>
+        </div>
+
+        <div class="i-timeline__item reveal" style="--reveal-offset:0.4s">
+          <div class="i-timeline__dot"></div>
+          <div class="i-timeline__body">
+            <span class="i-timeline__date">11 May 2026</span>
+            <h3>The Yes</h3>
+            <p>From a forgotten chat to forever — in the most unexpected way. Everything moved quickly, beautifully, and felt exactly right.</p>
+          </div>
+        </div>
+
+        <div class="i-timeline__item reveal" style="--reveal-offset:0.5s">
+          <div class="i-timeline__dot"></div>
+          <div class="i-timeline__body">
+            <span class="i-timeline__date">30 November 2026</span>
+            <h3>The Wedding</h3>
+            <p>Two people brought together by fate finally becoming one family. And now, the next chapter begins.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Jhalar: bg (cream) → bg2 (off-white) -->
+    <div class="jhalar jhalar--bg"></div>
+
+    <!-- ============================================================
+         SECTION 4: SAVE THE DATE + COUNTDOWN — ISSUE 2
+    ============================================================= -->
+    <section id="countdown" class="i-date">
+      <div class="i-date__header reveal">
+        <span class="section-label">Save the date</span>
+        <h2 class="section-title">The Date</h2>
+        <p class="i-date__hint">Scratch the three hearts to reveal our day</p>
+      </div>
+
+      <!-- Scratch hearts — ISSUE 2: grouped with labels, single row -->
+      <div class="i-scratch reveal" style="--reveal-offset:0.2s">
+        <div class="i-scratch__group">
+          <div class="i-scratch__heart">
+            <svg class="i-scratch__svg" viewBox="0 0 200 180" aria-hidden="true">
+              <path d="M100,170 C65,145 0,110 0,60 C0,20 30,0 55,8 C75,14 92,32 100,50 C108,32 125,14 145,8 C170,0 200,20 200,60 C200,110 135,145 100,170Z" fill="none" stroke="url(#gold-foil)" stroke-width="2"/>
+            </svg>
+            <canvas class="i-scratch__canvas" width="200" height="180"></canvas>
+            <span class="i-scratch__text">Monday,</span>
+          </div>
+          <span class="i-scratch__label">Day</span>
+        </div>
+        <div class="i-scratch__group">
+          <div class="i-scratch__heart">
+            <svg class="i-scratch__svg" viewBox="0 0 200 180" aria-hidden="true">
+              <path d="M100,170 C65,145 0,110 0,60 C0,20 30,0 55,8 C75,14 92,32 100,50 C108,32 125,14 145,8 C170,0 200,20 200,60 C200,110 135,145 100,170Z" fill="none" stroke="url(#gold-foil)" stroke-width="2"/>
+            </svg>
+            <canvas class="i-scratch__canvas" width="200" height="180"></canvas>
+            <span class="i-scratch__text">30 November</span>
+          </div>
+          <span class="i-scratch__label">Month</span>
+        </div>
+        <div class="i-scratch__group">
+          <div class="i-scratch__heart">
+            <svg class="i-scratch__svg" viewBox="0 0 200 180" aria-hidden="true">
+              <path d="M100,170 C65,145 0,110 0,60 C0,20 30,0 55,8 C75,14 92,32 100,50 C108,32 125,14 145,8 C170,0 200,20 200,60 C200,110 135,145 100,170Z" fill="none" stroke="url(#gold-foil)" stroke-width="2"/>
+            </svg>
+            <canvas class="i-scratch__canvas" width="200" height="180"></canvas>
+            <span class="i-scratch__text">2026</span>
+          </div>
+          <span class="i-scratch__label">Year</span>
+        </div>
+      </div>
+
+      <!-- Reveal the date button — ISSUE 2 -->
+      <button class="i-date__reveal-btn" id="reveal-date-btn">Reveal the date</button>
+
+      <!-- Revealed date (shown after all hearts scratched) -->
+      <div class="i-date__revealed" id="date-revealed">
+        <p class="i-date__full">Monday, 30 November 2026</p>
+        <p class="i-date__muhurat">Phere at the auspicious muhurat</p>
+      </div>
+
+      <!-- Diamond divider — ISSUE 2 -->
+      <div class="i-diamond-divider">
+        <span class="i-diamond-divider__line"></span>
+        <span class="i-diamond-divider__shape"></span>
+        <span class="i-diamond-divider__line"></span>
+      </div>
+
+      <!-- Countdown -->
+      <div class="i-countdown reveal" style="--reveal-offset:0.3s">
+        <div class="i-countdown__box">
+          <span class="i-countdown__num" id="cd-days">00</span>
+          <span class="i-countdown__label">days</span>
+        </div>
+        <div class="i-countdown__box">
+          <span class="i-countdown__num" id="cd-hours">00</span>
+          <span class="i-countdown__label">hours</span>
+        </div>
+        <div class="i-countdown__box">
+          <span class="i-countdown__num" id="cd-minutes">00</span>
+          <span class="i-countdown__label">minutes</span>
+        </div>
+        <div class="i-countdown__box">
+          <span class="i-countdown__num" id="cd-seconds">00</span>
+          <span class="i-countdown__label">seconds</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Jhalar: bg2 → bg (cream) -->
+    <div class="jhalar jhalar--bg2"></div>
+
+    <!-- ============================================================
+         SECTION 5: EVENTS — ISSUE 3: split layout cards
+    ============================================================= -->
+    <section id="events" class="i-events">
+      <div class="i-events__header reveal">
+        <span class="section-label">29 to 30 November</span>
+        <h2 class="section-title">The functions</h2>
+        <div class="i-divider i-divider--sm">
+          <span class="i-divider__line"></span>
+          <svg width="20" height="18" viewBox="0 0 20 18" aria-hidden="true">
+            <path d="M10 16 C7 13 0 8 0 4.5 C0 1.5 2.5 0 5 0.5 C7 1 9 3 10 5 C11 3 13 1 15 0.5 C17.5 0 20 1.5 20 4.5 C20 8 13 13 10 16Z" fill="url(#gold-foil)"/>
+          </svg>
+          <span class="i-divider__line"></span>
+        </div>
+      </div>
+
+      <div class="i-events__grid">
+        <!-- Bhaat -->
+        <article class="i-event reveal" style="--reveal-offset:0.1s">
+          <div class="i-event__hero">
+            <img src="assets/images/mehndi-800.webp" alt="Bhaat ceremony" loading="lazy" class="i-event__hero-img">
+            <div class="i-event__hero-overlay"></div>
+            <div class="i-event__hero-text">
+              <p class="i-event__date">Sunday &middot; 29 November</p>
+              <h3 class="i-event__name">Bhaat</h3>
+              <p class="i-event__time">1:00 pm</p>
+            </div>
+          </div>
+          <div class="i-event__details">
+            <p class="i-event__venue">
+              <svg class="i-event__pin" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 0C4.24 0 2 2.24 2 5c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 7.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" fill="var(--i-gold)"/></svg>
+              Zuke Gardens, Chakra, Purulia
+            </p>
+            <p class="i-event__desc">A traditional ceremony of love and blessings from the bride's maternal family. An auspicious start to the celebrations.</p>
+            <p class="i-event__dress">
+              <svg class="i-event__hanger" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 3.5V2a1 1 0 10-1 1h1m0 .5L1.5 8.5h11L7 3.5z" fill="none" stroke="var(--i-gold)" stroke-width="1"/><line x1="1.5" y1="8.5" x2="1.5" y2="11" stroke="var(--i-gold)" stroke-width="1"/><line x1="12.5" y1="8.5" x2="12.5" y2="11" stroke="var(--i-gold)" stroke-width="1"/></svg>
+              Dress: Traditional attire
+            </p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Zuke+Gardens+Chakra+Purulia" target="_blank" rel="noopener noreferrer" class="i-event__btn">
+              <svg width="12" height="12" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 0C4.24 0 2 2.24 2 5c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 7.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" fill="currentColor"/></svg>
+              Directions
+            </a>
+          </div>
+        </article>
+
+        <!-- Sangeet -->
+        <article class="i-event reveal" style="--reveal-offset:0.2s">
+          <div class="i-event__hero">
+            <img src="assets/images/haldi-800.webp" alt="Sangeet night" loading="lazy" class="i-event__hero-img">
+            <div class="i-event__hero-overlay"></div>
+            <div class="i-event__hero-text">
+              <p class="i-event__date">Sunday &middot; 29 November</p>
+              <h3 class="i-event__name">Sangeet</h3>
+              <p class="i-event__time">7:00 pm</p>
+            </div>
+          </div>
+          <div class="i-event__details">
+            <p class="i-event__venue">
+              <svg class="i-event__pin" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 0C4.24 0 2 2.24 2 5c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 7.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" fill="var(--i-gold)"/></svg>
+              Zuke Gardens, Chakra, Purulia
+            </p>
+            <p class="i-event__desc">An evening of music, dance and celebration with both families on one stage. Get ready to show your best moves!</p>
+            <p class="i-event__dress">
+              <svg class="i-event__hanger" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 3.5V2a1 1 0 10-1 1h1m0 .5L1.5 8.5h11L7 3.5z" fill="none" stroke="var(--i-gold)" stroke-width="1"/><line x1="1.5" y1="8.5" x2="1.5" y2="11" stroke="var(--i-gold)" stroke-width="1"/><line x1="12.5" y1="8.5" x2="12.5" y2="11" stroke="var(--i-gold)" stroke-width="1"/></svg>
+              Dress: Colorful and festive
+            </p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Zuke+Gardens+Chakra+Purulia" target="_blank" rel="noopener noreferrer" class="i-event__btn">
+              <svg width="12" height="12" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 0C4.24 0 2 2.24 2 5c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 7.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" fill="currentColor"/></svg>
+              Directions
+            </a>
+          </div>
+        </article>
+
+        <!-- Carnival & Haldi -->
+        <article class="i-event reveal" style="--reveal-offset:0.3s">
+          <div class="i-event__hero">
+            <img src="assets/images/mehndi-800.webp" alt="Carnival and Haldi ceremony" loading="lazy" class="i-event__hero-img">
+            <div class="i-event__hero-overlay"></div>
+            <div class="i-event__hero-text">
+              <p class="i-event__date">Monday &middot; 30 November</p>
+              <h3 class="i-event__name">Carnival &amp; Haldi</h3>
+              <p class="i-event__time">11:00 am</p>
+            </div>
+          </div>
+          <div class="i-event__details">
+            <p class="i-event__venue">
+              <svg class="i-event__pin" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 0C4.24 0 2 2.24 2 5c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 7.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" fill="var(--i-gold)"/></svg>
+              Zuke Gardens, Chakra, Purulia
+            </p>
+            <p class="i-event__desc">A colourful morning carnival of turmeric, laughter and blessings for the couple. Wear something you will not miss!</p>
+            <p class="i-event__dress">
+              <svg class="i-event__hanger" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 3.5V2a1 1 0 10-1 1h1m0 .5L1.5 8.5h11L7 3.5z" fill="none" stroke="var(--i-gold)" stroke-width="1"/><line x1="1.5" y1="8.5" x2="1.5" y2="11" stroke="var(--i-gold)" stroke-width="1"/><line x1="12.5" y1="8.5" x2="12.5" y2="11" stroke="var(--i-gold)" stroke-width="1"/></svg>
+              Dress: Shades of yellow
+            </p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Zuke+Gardens+Chakra+Purulia" target="_blank" rel="noopener noreferrer" class="i-event__btn">
+              <svg width="12" height="12" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 0C4.24 0 2 2.24 2 5c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 7.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" fill="currentColor"/></svg>
+              Directions
+            </a>
+          </div>
+        </article>
+
+        <!-- Baraat & Shubh Vivah -->
+        <article class="i-event reveal" style="--reveal-offset:0.4s">
+          <div class="i-event__hero">
+            <img src="assets/images/baraat-800.webp" alt="Baraat and Shubh Vivah" loading="lazy" class="i-event__hero-img">
+            <div class="i-event__hero-overlay"></div>
+            <div class="i-event__hero-text">
+              <p class="i-event__date">Monday &middot; 30 November</p>
+              <h3 class="i-event__name">Baraat &amp; Shubh Vivah</h3>
+              <p class="i-event__time">7:00 pm</p>
+            </div>
+          </div>
+          <div class="i-event__details">
+            <p class="i-event__venue">
+              <svg class="i-event__pin" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 0C4.24 0 2 2.24 2 5c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 7.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" fill="var(--i-gold)"/></svg>
+              Zuke Gardens, Chakra, Purulia
+            </p>
+            <p class="i-event__desc">The groom arrives in style, jaimala welcomes the bride, and the sacred pheras begin under the stars.</p>
+            <p class="i-event__dress">
+              <svg class="i-event__hanger" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 3.5V2a1 1 0 10-1 1h1m0 .5L1.5 8.5h11L7 3.5z" fill="none" stroke="var(--i-gold)" stroke-width="1"/><line x1="1.5" y1="8.5" x2="1.5" y2="11" stroke="var(--i-gold)" stroke-width="1"/><line x1="12.5" y1="8.5" x2="12.5" y2="11" stroke="var(--i-gold)" stroke-width="1"/></svg>
+              Dress: Your festive best
+            </p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Zuke+Gardens+Chakra+Purulia" target="_blank" rel="noopener noreferrer" class="i-event__btn">
+              <svg width="12" height="12" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 0C4.24 0 2 2.24 2 5c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 7.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" fill="currentColor"/></svg>
+              Directions
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Jhalar: bg → bg2 -->
+    <div class="jhalar jhalar--bg"></div>
+
+    <!-- ============================================================
+         SECTION 6: THE FAMILIES
+    ============================================================= -->
+    <section id="family" class="i-family">
+      <div class="i-family__header reveal">
+        <span class="section-label">The families</span>
+        <h2 class="section-title">Two families, one celebration</h2>
+      </div>
+
+      <div class="i-family__cards">
+        <div class="i-family__card reveal" style="--reveal-offset:0.1s">
+          <span class="i-family__card-label">The groom's family</span>
+          <h3 class="i-family__card-name">The Gaddhyans</h3>
+          <p>Smt. Meera &amp; Shri Sanjay Gaddhyan</p>
+          <p class="i-family__card-city">Chirkunda, Dhanbad, Jharkhand</p>
+        </div>
+        <div class="i-family__separator" aria-hidden="true"><svg width="36" height="36" viewBox="0 0 36 36"><path d="M18 30 C12 25 0 18 0 10 C0 4 5 0 10 2 C14 3 17 7 18 10 C19 7 22 3 26 2 C31 0 36 4 36 10 C36 18 24 25 18 30Z" fill="url(#gold-foil)" opacity="0.6"/><path d="M4 18 Q9 16 14 18" stroke="url(#gold-foil)" stroke-width="0.5" fill="none"/><path d="M22 18 Q27 16 32 18" stroke="url(#gold-foil)" stroke-width="0.5" fill="none"/></svg></div>
+        <div class="i-family__card reveal" style="--reveal-offset:0.2s">
+          <span class="i-family__card-label">The bride's family</span>
+          <h3 class="i-family__card-name">The Marodias</h3>
+          <p>Smt. Neelam &amp; Shri Sanjay Kumar Marodia</p>
+          <p class="i-family__card-city">Raniganj, West Bengal</p>
+        </div>
+      </div>
+
+      <!-- Handwritten quote -->
+      <div class="i-family__note reveal" style="--reveal-offset:0.3s">
+        <p>Two homes, two cities, one love story that brought us all together. We cannot wait to celebrate with you.</p>
+      </div>
+
+      <!-- Family member lists -->
+      <div class="i-family__roles reveal" style="--reveal-offset:0.4s">
+        <div class="i-family__role">
+          <h4 class="i-family__role-title">Darshanabhilashi</h4>
+          <p>Bimal Gaddhyan</p>
+          <p>Sanjay Gaddhyan</p>
+        </div>
+        <div class="i-family__role">
+          <h4 class="i-family__role-title">Swagatotsuk</h4>
+          <p>Satyanarayan Marodia</p>
+          <p>and the whole Gaddhyan &amp; Marodia family</p>
+        </div>
+      </div>
+
+      <div class="i-family__quote reveal" style="--reveal-offset:0.45s"><blockquote>"We can't wait to dance at the wedding!"</blockquote><cite>— The cousins</cite></div>
+
+      <p class="i-family__close reveal" style="--reveal-offset:0.5s">Dhanbad and Raniganj, one family from now on.</p>
+    </section>
+
+    <!-- Jhalar: bg2 → bg -->
+    <div class="jhalar jhalar--bg2"></div>
+
+    <!-- ============================================================
+         SECTION 7: GALLERY — ISSUE 7: larger SVG icons
+    ============================================================= -->
+    <section id="gallery" class="i-gallery">
+      <div class="i-gallery__header reveal">
+        <span class="section-label">Moments</span>
+        <h2 class="section-title">A few moments so far</h2>
+        <div class="i-divider i-divider--sm">
+          <span class="i-divider__line"></span>
+          <svg width="20" height="18" viewBox="0 0 20 18" aria-hidden="true">
+            <path d="M10 16 C7 13 0 8 0 4.5 C0 1.5 2.5 0 5 0.5 C7 1 9 3 10 5 C11 3 13 1 15 0.5 C17.5 0 20 1.5 20 4.5 C20 8 13 13 10 16Z" fill="url(#gold-foil)"/>
+          </svg>
+          <span class="i-divider__line"></span>
+        </div>
+      </div>
+
+      <div class="i-gallery__carousel">
+        <figure class="i-gallery__item reveal" style="--reveal-offset:0.1s">
+          <div class="i-gallery__placeholder i-gallery__placeholder--1">
+            <svg width="56" height="56" viewBox="0 0 32 32" aria-hidden="true" opacity="0.5">
+              <path d="M16 2 C17 6 20 8 24 8 C20 10 18 14 16 18 C14 14 12 10 8 8 C12 8 15 6 16 2Z" fill="url(#gold-foil)"/>
+            </svg>
+          </div>
+          <figcaption>Under the rose arch</figcaption>
+        </figure>
+        <figure class="i-gallery__item reveal" style="--reveal-offset:0.2s">
+          <div class="i-gallery__placeholder i-gallery__placeholder--2">
+            <svg width="56" height="56" viewBox="0 0 32 32" aria-hidden="true" opacity="0.5">
+              <path d="M16 4 Q20 10 26 10 Q20 14 20 22 Q16 16 10 22 Q10 14 4 10 Q10 10 16 4Z" fill="url(#gold-foil)"/>
+            </svg>
+          </div>
+          <figcaption>Haldi morning</figcaption>
+        </figure>
+        <figure class="i-gallery__item reveal" style="--reveal-offset:0.3s">
+          <div class="i-gallery__placeholder i-gallery__placeholder--3">
+            <svg width="56" height="56" viewBox="0 0 32 32" aria-hidden="true" opacity="0.5">
+              <circle cx="16" cy="16" r="10" fill="none" stroke="url(#gold-foil)" stroke-width="1"/>
+              <circle cx="16" cy="16" r="5" fill="url(#gold-foil)" opacity="0.4"/>
+            </svg>
+          </div>
+          <figcaption>Mehndi and sangeet</figcaption>
+        </figure>
+        <figure class="i-gallery__item reveal" style="--reveal-offset:0.4s">
+          <div class="i-gallery__placeholder i-gallery__placeholder--4">
+            <svg width="56" height="56" viewBox="0 0 32 32" aria-hidden="true" opacity="0.5">
+              <path d="M16 2 L18 12 L28 12 L20 18 L23 28 L16 22 L9 28 L12 18 L4 12 L14 12Z" fill="none" stroke="url(#gold-foil)" stroke-width="0.8"/>
+            </svg>
+          </div>
+          <figcaption>The baraat arrives</figcaption>
+        </figure>
+      </div>
+      <div class="i-gallery__progress"><div class="i-gallery__progress-bar"></div></div>
+    </section>
+
+    <!-- Jhalar: bg → bg2 -->
+    <div class="jhalar jhalar--bg"></div>
+
+    <!-- ============================================================
+         SECTION 8: VENUE
+    ============================================================= -->
+    <section id="venue" class="i-venue">
+      <div class="i-venue__header reveal">
+        <span class="section-label">The venue</span>
+        <h2 class="section-title">Getting here</h2>
+      </div>
+
+      <div class="i-venue__map reveal" style="--reveal-offset:0.1s">
+        <div class="i-venue__map-inner">
+          <h3 class="i-venue__map-name">Zuke Gardens</h3>
+          <p class="i-venue__map-addr">Chakra, Purulia, West Bengal</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Zuke+Gardens+Chakra+Purulia" target="_blank" rel="noopener noreferrer" class="i-venue__map-btn">Open in Google Maps</a>
+        </div>
+      </div>
+
+      <div class="i-venue__info-grid">
+        <!-- By air -->
+        <div class="i-venue__info reveal" style="--reveal-offset:0.15s">
+          <svg class="i-venue__icon" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+            <path d="M3 18 L11 14 L9 6 L12 8 L15 14 L22 11 C24 10 26 11 25 13 L14 18 L12 24 L10 22 L11 17 L3 20 L2 18Z" fill="none" stroke="var(--i-gold)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div>
+            <h4>By air</h4>
+            <p>Ranchi Airport (Birsa Munda) is about 3 hours from the venue. Kolkata Airport is about 5 hours away.</p>
+          </div>
+        </div>
+        <!-- By train -->
+        <div class="i-venue__info reveal" style="--reveal-offset:0.25s">
+          <svg class="i-venue__icon" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+            <rect x="6" y="3" width="16" height="18" rx="3" fill="none" stroke="var(--i-gold)" stroke-width="1.2"/>
+            <line x1="6" y1="12" x2="22" y2="12" stroke="var(--i-gold)" stroke-width="1"/>
+            <circle cx="10" cy="17" r="1.5" fill="var(--i-gold)"/>
+            <circle cx="18" cy="17" r="1.5" fill="var(--i-gold)"/>
+            <line x1="9" y1="21" x2="6" y2="25" stroke="var(--i-gold)" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="19" y1="21" x2="22" y2="25" stroke="var(--i-gold)" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          <div>
+            <h4>By train</h4>
+            <p>Purulia Junction is about 30 minutes away. Tell us your train and we will send a car.</p>
+          </div>
+        </div>
+        <!-- Where to stay -->
+        <div class="i-venue__info reveal" style="--reveal-offset:0.35s">
+          <svg class="i-venue__icon" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+            <rect x="3" y="12" width="22" height="12" rx="2" fill="none" stroke="var(--i-gold)" stroke-width="1.2"/>
+            <path d="M6 12 V8 C6 6 8 4 14 4 C20 4 22 6 22 8 V12" fill="none" stroke="var(--i-gold)" stroke-width="1.2"/>
+            <rect x="6" y="15" width="6" height="4" rx="1" fill="none" stroke="var(--i-gold)" stroke-width="0.8"/>
+          </svg>
+          <div>
+            <h4>Where to stay</h4>
+            <p>Rooms are held at the venue for family and friends. Mention it in your reply.</p>
+          </div>
+        </div>
+        <!-- February nights -->
+        <div class="i-venue__info reveal" style="--reveal-offset:0.45s">
+          <svg class="i-venue__icon" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+            <rect x="11" y="4" width="6" height="16" rx="3" fill="none" stroke="var(--i-gold)" stroke-width="1.2"/>
+            <line x1="14" y1="22" x2="14" y2="24" stroke="var(--i-gold)" stroke-width="1.2" stroke-linecap="round"/>
+            <circle cx="14" cy="16" r="2.5" fill="var(--i-gold)" opacity="0.4"/>
+            <line x1="8" y1="8" x2="6" y2="8" stroke="var(--i-gold)" stroke-width="0.8" stroke-linecap="round"/>
+            <line x1="20" y1="8" x2="22" y2="8" stroke="var(--i-gold)" stroke-width="0.8" stroke-linecap="round"/>
+            <line x1="8" y1="12" x2="6" y2="12" stroke="var(--i-gold)" stroke-width="0.8" stroke-linecap="round"/>
+            <line x1="20" y1="12" x2="22" y2="12" stroke="var(--i-gold)" stroke-width="0.8" stroke-linecap="round"/>
+          </svg>
+          <div>
+            <h4>November evenings</h4>
+            <p>Late November evenings are cool and pleasant, around 15°C. Carry a light shawl for the evening ceremonies.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Jhalar: bg2 → bg -->
+    <div class="jhalar jhalar--bg2"></div>
+
+    <!-- ============================================================
+         SECTION 9: RSVP
+    ============================================================= -->
+    <section id="rsvp" class="i-rsvp">
+      <div class="i-rsvp__header reveal">
+        <h2 class="section-title">Send us your wishes</h2>
+        <p class="i-rsvp__plate">We would love to hear from you. Drop a message for the couple!</p>
+      </div>
+
+      <div class="i-rsvp__card reveal" style="--reveal-offset:0.15s">
+        <!-- Stamp badge -->
+        <div class="i-rsvp__stamp" aria-hidden="true">M&amp;S</div>
+
+        <form id="rsvp-form" class="i-rsvp__form">
+          <div class="i-rsvp__field">
+            <label for="rsvp-name">Your name</label>
+            <input type="text" id="rsvp-name" name="name" required placeholder="Full name" autocomplete="name">
+          </div>
+
+          <div class="i-rsvp__field">
+            <label for="rsvp-message">Your message for Mukul &amp; Sailly</label>
+            <textarea id="rsvp-message" name="message" rows="4" required placeholder="Write something lovely..."></textarea>
+          </div>
+
+          <button type="submit" class="i-rsvp__submit">Send message on WhatsApp</button>
+          <p class="i-rsvp__note">Opens WhatsApp with your message ready to send</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Jhalar: bg → stage (dark) -->
+    <div class="jhalar jhalar--bg"></div>
+
+    <!-- ============================================================
+         SECTION 10: CLOSING
+    ============================================================= -->
+    <section id="closing" class="i-closing">
+      <!-- Diya lamp left -->
+      <div class="i-closing__diya i-closing__diya--left" aria-hidden="true">
+        <svg width="48" height="64" viewBox="0 0 48 64">
+          <g class="diya-flame">
+            <ellipse cx="24" cy="14" rx="5" ry="10" fill="#f3c84e" opacity="0.9"/>
+            <ellipse cx="24" cy="16" rx="3" ry="6" fill="#f7e08a"/>
+          </g>
+          <path d="M14 32 Q10 38 12 44 L36 44 Q38 38 34 32 Z" fill="url(#gold-foil)" opacity="0.7"/>
+          <ellipse cx="24" cy="32" rx="12" ry="4" fill="url(#gold-foil)" opacity="0.8"/>
+          <rect x="18" y="44" width="12" height="4" rx="1" fill="url(#gold-foil)" opacity="0.6"/>
+          <ellipse cx="24" cy="50" rx="14" ry="3" fill="url(#gold-foil)" opacity="0.5"/>
+        </svg>
+      </div>
+
+      <div class="i-closing__content">
+        <!-- Heart divider -->
+        <div class="i-divider i-divider--sm reveal" style="--reveal-offset:0.1s">
+          <span class="i-divider__line i-divider__line--light"></span>
+          <svg width="20" height="18" viewBox="0 0 20 18" aria-hidden="true">
+            <path d="M10 16 C7 13 0 8 0 4.5 C0 1.5 2.5 0 5 0.5 C7 1 9 3 10 5 C11 3 13 1 15 0.5 C17.5 0 20 1.5 20 4.5 C20 8 13 13 10 16Z" fill="url(#gold-foil)"/>
+          </svg>
+          <span class="i-divider__line i-divider__line--light"></span>
+        </div>
+
+        <p class="i-closing__text reveal" style="--reveal-offset:0.2s">Your presence is the only gift we ask for.</p>
+        <p class="i-closing__credit reveal" style="--reveal-offset:0.3s">The Gaddhyan &amp; Marodia families</p>
+
+        <!-- Bottom heart divider -->
+        <div class="i-divider i-divider--sm reveal" style="--reveal-offset:0.4s">
+          <span class="i-divider__line i-divider__line--light"></span>
+          <svg width="20" height="18" viewBox="0 0 20 18" aria-hidden="true">
+            <path d="M10 16 C7 13 0 8 0 4.5 C0 1.5 2.5 0 5 0.5 C7 1 9 3 10 5 C11 3 13 1 15 0.5 C17.5 0 20 1.5 20 4.5 C20 8 13 13 10 16Z" fill="url(#gold-foil)"/>
+          </svg>
+          <span class="i-divider__line i-divider__line--light"></span>
+        </div>
+
+        <button class="i-closing__share reveal" id="share-btn" style="--reveal-offset:0.45s"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><polyline points="16 6 12 2 8 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="2" x2="12" y2="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Share this invitation</button>
+
+        <p class="i-closing__made reveal" style="--reveal-offset:0.5s">Made With Love by Mukul Gaddhyan</p>
+      </div>
+
+      <!-- Diya lamp right -->
+      <div class="i-closing__diya i-closing__diya--right" aria-hidden="true">
+        <svg width="48" height="64" viewBox="0 0 48 64">
+          <g class="diya-flame">
+            <ellipse cx="24" cy="14" rx="5" ry="10" fill="#f3c84e" opacity="0.9"/>
+            <ellipse cx="24" cy="16" rx="3" ry="6" fill="#f7e08a"/>
+          </g>
+          <path d="M14 32 Q10 38 12 44 L36 44 Q38 38 34 32 Z" fill="url(#gold-foil)" opacity="0.7"/>
+          <ellipse cx="24" cy="32" rx="12" ry="4" fill="url(#gold-foil)" opacity="0.8"/>
+          <rect x="18" y="44" width="12" height="4" rx="1" fill="url(#gold-foil)" opacity="0.6"/>
+          <ellipse cx="24" cy="50" rx="14" ry="3" fill="url(#gold-foil)" opacity="0.5"/>
+        </svg>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ISSUE 5: Bottom navigation bar -->
+  <nav class="bottom-nav" aria-label="Quick actions">
+    <a href="#rsvp" class="bottom-nav__item bottom-nav__item--accent">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.5"/><path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <span>RSVP</span>
+    </a>
+    <a href="#countdown" class="bottom-nav__item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>Dates</span>
+    </a>
+    <button class="bottom-nav__item bottom-nav__music-btn is-paused" aria-label="Toggle music">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>Music</span>
+    </button>
+    <button class="bottom-nav__item bottom-nav__more-btn" aria-label="More options">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="12" cy="5" r="1.5" fill="currentColor"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/><circle cx="12" cy="19" r="1.5" fill="currentColor"/>
+      </svg>
+      <span>More</span>
+    </button>
+  </nav>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

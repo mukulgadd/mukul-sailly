@@ -1,0 +1,12 @@
+{
+  "name": "card1-wedding-invitation",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "npx playwright test",
+    "test:exploration": "npx playwright test tests/envelope-cover-exploration.spec.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.52.0"
+  }
+}

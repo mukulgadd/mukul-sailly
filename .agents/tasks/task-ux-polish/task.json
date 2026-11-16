@@ -1,0 +1,7 @@
+{
+  "task_id": "task-ux-polish",
+  "task_description": "Fix all 23 actionable UX gaps (items 1-25 minus 10 and 20) from the side-by-side comparison with the reference wedding invitation site. Covers CSS animations (shimmer, breathing, draw-in, staggered reveals), component overhauls (gallery carousel, venue arch, event card height, 3D scratch hearts), new features (skip button, share button, active nav highlighting), and visual refinements (shadows, jhalar, font sizes, closing photo bg, RSVP stamp, family quote).",
+  "status": "pending",
+  "feature_order": ["FEAT-001", "FEAT-002"],
+  "blocked_reason": null
+}

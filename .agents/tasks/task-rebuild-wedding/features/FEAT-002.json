@@ -1,0 +1,56 @@
+{
+  "id": "FEAT-002",
+  "type": "feat",
+  "description": "Complete rewrite of js/script.js to add all interactive behavior to the HTML/CSS from FEAT-001. Covers: page loader fade-out, scroll-reveal via IntersectionObserver with staggered delays using --reveal-offset, countdown timer (Feb 19 2027 11:40 PM IST), SVG-heart-shaped scratch card with canvas overlay, subtle hero parallax, music toggle, RSVP form WhatsApp URL builder, and smooth scroll. Depends on FEAT-001 DOM structure and CSS classes.",
+  "status": "pending",
+  "steps": [
+    "Step 1 — Create js/script.js with DOMContentLoaded wrapper (or IIFE). Structure with clearly commented sections. All selectors must match the class names from FEAT-001: .reveal, .is-visible, .is-hidden, .is-paused, .i-hero__bg-blur, .i-scratch__heart canvas, .i-date__revealed, .i-countdown__num, #cd-days, #cd-hours, #cd-minutes, #cd-seconds, #rsvp-form, .music-toggle, #loader. Read FEAT-001.json findings field first to confirm exact selectors.",
+
+    "Step 2 — Loader module. On DOMContentLoaded, wait 1.2s (enough for fonts/images to begin loading), then add .is-hidden to #loader. On transitionend, set display:none. Fallback: force-hide after 2.5s via setTimeout even if transitionend doesn't fire. Clean up event listener after first fire.",
+
+    "Step 3 — Scroll Reveal module. Query all elements with class 'reveal'. Create IntersectionObserver with options { threshold: 0.12, rootMargin: '0px 0px -60px 0px' }. On entry.isIntersecting: add class 'is-visible' to entry.target, then unobserve it (one-shot). The CSS transition reads --reveal-offset from the element's inline style for stagger delay, so no JS stagger logic needed — just add the class and CSS handles the rest. Observe all .reveal elements after loader hides (so hero entrance animations play after loader fades).",
+
+    "Step 4 — Countdown Timer module. Target: new Date('2027-02-19T23:40:00+05:30') — Feb 19 2027 11:40 PM IST. updateCountdown() calculates diff in ms, extracts days/hours/minutes/seconds, pads to 2 digits. Updates textContent of #cd-days, #cd-hours, #cd-minutes, #cd-seconds. On value change: add .is-ticking class to the element (triggers CSS @keyframes cd-tick scale pulse), remove after 500ms. Call immediately + setInterval every 1000ms. If past target, show 00 for all and clearInterval. Store previous values to detect changes.",
+
+    "Step 5 — Scratch Card module — Heart-shaped Canvas Setup. Query all <canvas> elements inside .i-scratch__heart wrappers. For each canvas: (a) Read the parent wrapper's dimensions to size the canvas (accounting for devicePixelRatio for crisp rendering). Set canvas.width and canvas.height to CSS dimensions * DPR. (b) Scale context by DPR. (c) Draw the gold cover: set fillStyle to '#c9a84c' (or a gold gradient using createLinearGradient matching the gold foil palette). Draw a filled heart path that matches the CSS clip-path heart shape — use the SAME bezier curve control points as the clip-path in CSS so the gold fill perfectly aligns with the heart clip region. The heart drawing function: ctx.beginPath(); ctx.moveTo(cx, bottom); bezierCurveTo for left curve, left bump, right bump, right curve; closePath(); fill(). (d) Set globalCompositeOperation = 'destination-out' for erasing. (e) Track per-canvas state: { scratching: false, revealed: false }.",
+
+    "Step 6 — Scratch Card module — Event Handlers. MOUSE: mousedown → scratching=true, scratch at position. mousemove → if scratching, erase circle (radius 18px) at (e.clientX - rect.left, e.clientY - rect.top). mouseup/mouseleave → scratching=false, check reveal. TOUCH: touchstart → scratching=true, scratch. touchmove (passive:false, preventDefault to stop page scroll) → scratch at e.touches[0] position. touchend/touchcancel → scratching=false, check reveal. REVEAL CHECK: getImageData on full canvas, count alpha===0 pixels. If >45% transparent, mark as revealed, clear entire canvas with destination-out fillRect, and check if all 3 are revealed. When all 3 revealed: add .is-visible to .i-date__revealed to fade in the date display. Also add a class to each heart wrapper to indicate its revealed state for any CSS transitions on the underlying text.",
+
+    "Step 7 — Hero Parallax module. Query .i-hero__bg-blur image element. On scroll (throttled via requestAnimationFrame — use a ticking flag to queue max one rAF): read window.scrollY. If scrollY < window.innerHeight (still near hero), apply transform: translateY(${scrollY * 0.25}px) to the blur image, creating a subtle parallax as user begins to scroll. On mobile (<768px via matchMedia), reduce factor to 0.12 or skip entirely for performance. Use { passive: true } on the scroll listener.",
+
+    "Step 8 — Music Toggle module. Query .music-toggle button. Set initial state: is-paused (bars not animating). On click: toggle .is-paused class. This is visual-only — no audio element. The CSS handles animation start/stop based on the class.",
+
+    "Step 9 — RSVP WhatsApp Form Builder. Query #rsvp-form. On submit (e.preventDefault()): (a) Read form data: name from input[name='name'], attending from input[name='attending']:checked value, message from textarea[name='message']. (b) Build a WhatsApp message string. If attending==='yes': 'Hi! I'm [name] and I'll be there for Arjun & Meera's wedding! 🎉' + (message ? '\\n\\nNote: ' + message : ''). If attending==='no': 'Hi! I'm [name]. Unfortunately, I won't be able to make it to Arjun & Meera's wedding. Wishing them all the best! 💐' + (message ? '\\n\\nNote: ' + message : ''). (c) Encode the message with encodeURIComponent. (d) Open URL: window.open('https://wa.me/919999999999?text=' + encodedMessage, '_blank'). The phone number is a placeholder — use 919999999999. This MUST actually work — clicking submit should open WhatsApp with the pre-filled message.",
+
+    "Step 10 — Smooth Scroll module. Query all a[href^='#'] anchor links. On click: e.preventDefault(), get target element by ID from href attribute, call targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' }). Also set html scroll-behavior: smooth as CSS fallback.",
+
+    "Step 11 — Integration and error handling. Wrap each module init in a try-catch so one failing module doesn't break others. Log caught errors to console.warn with the module name. Ensure all DOM queries use null checks before accessing properties. Test that the page works correctly with all modules: loader fades → hero entrance animations play → scroll reveals trigger → countdown ticks → scratch cards work → RSVP form submits to WhatsApp."
+  ],
+  "acceptance_criteria": [
+    "Page loader appears briefly then fades out smoothly, revealing content.",
+    "Scrolling triggers .is-visible on .reveal elements, producing fade-in + slide-up animations with staggered delays.",
+    "Hero entrance animations play with staggered timing (0.35s, 0.6s, 1.35s, 1.5s, 2.45s, 2.7s) after loader fades.",
+    "Countdown timer shows correct Days/Hours/Minutes/Seconds until Feb 19 2027 11:40 PM IST and updates every second.",
+    "Countdown numbers pulse briefly when values change.",
+    "Three heart-shaped scratch canvases can be scratched with mouse drag to reveal text underneath.",
+    "Scratch cards work with touch/swipe on mobile (tested in Chrome DevTools device mode).",
+    "After all 3 hearts scratched >45%, the full date display fades in.",
+    "Hero has subtle parallax on scroll (background image shifts slower).",
+    "Music toggle button toggles bar animation on click.",
+    "RSVP form submit builds correct WhatsApp URL and opens in new tab — name, attendance, and message are included in the pre-filled text.",
+    "No JavaScript errors in browser console.",
+    "All animations maintain 60fps — only transform and opacity are animated."
+  ],
+  "verification": [
+    "Open file:///Users/mukul.gaddhyan/Git/shadhi/card1/index.html in Playwright browser. Verify loader appears then fades.",
+    "Scroll through page — each section and card should fade/slide in as it enters viewport.",
+    "Verify countdown shows correct remaining time and ticks every second.",
+    "Click and drag on scratch card hearts — gold layer should erase revealing text. After all 3 scratched, date appears.",
+    "Fill in RSVP form (name: 'Test', attending: 'yes', message: 'Excited!') and click submit — verify the WhatsApp URL opens correctly with pre-filled message.",
+    "Click music toggle — bars should animate/pause.",
+    "Check browser console for JavaScript errors — there should be none.",
+    "Test at 375px width in device emulation — touch interactions on scratch cards should work."
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

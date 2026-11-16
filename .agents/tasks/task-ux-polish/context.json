@@ -1,0 +1,23 @@
+{
+  "project_type": "Static HTML/CSS/JS wedding invitation website (no framework, no bundler)",
+  "language": "HTML, CSS, JavaScript (vanilla ES5-style IIFE)",
+  "build_system": "None — static files served directly. Use `python3 -m http.server 8765` from the workspace root for local dev.",
+  "test_framework": "None",
+  "build_command": "N/A — no build step required",
+  "test_command": "node --check js/script.js",
+  "verification_instructions": "1. Run `node --check js/script.js` to validate JavaScript syntax has no errors. 2. Optionally serve the site with `python3 -m http.server 8765` and open http://localhost:8765 in a browser to visually verify. 3. Verify the envelope seal click, scratch hearts, countdown timer, RSVP form, and bottom nav links still work.",
+  "snapshot_or_generated_files": null,
+  "environment_constraints": "No npm/node_modules. No package.json. Do not install packages or add build tools. All changes must stay within the 3 source files (index.html, css/styles.css, js/script.js). The image assets in assets/images/ already exist — do not add new image files. Corporate system — do not modify firewall or network settings.",
+  "contribution_requirements": "No formal docs. Keep personal info unchanged (names, dates, venues, family details). Keep Our Story timeline content unchanged. Commit locally on the branch; never push.",
+  "key_patterns": "BEM-ish CSS class naming: .i-section__element--modifier. JS uses IIFE wrapping all modules, each in its own function (initEnvelope, initLoader, initScrollReveal, etc.), all called from a single DOMContentLoaded handler. CSS custom properties on :root for theming (--i-gold, --i-accent, --i-bg, etc.). Scroll reveal via IntersectionObserver adding .is-visible class. Gold foil gradient reused via var(--gold-foil) and SVG linearGradient id='gold-foil'. Fonts: Great Vibes (script), Cormorant Garamond (serif), Anek Latin/Devanagari (body), Kalam (handwritten).",
+  "relevant_files": [
+    "index.html",
+    "css/styles.css",
+    "js/script.js",
+    "assets/images/couple-640.webp",
+    "assets/images/couple.webp",
+    ".agents/tasks/ux-comparison-report.md",
+    ".agents/tasks/ux-fix-plan.md"
+  ],
+  "directory_structure": "Flat static site: index.html at root, css/styles.css for all styles, js/script.js for all interactivity, assets/images/ for 7 webp images (couple, couple-640, cover-poster, ganesh, baraat-800, haldi-800, mehndi-800). No subdirectories beyond that. .agents/tasks/ contains planning artifacts."
+}

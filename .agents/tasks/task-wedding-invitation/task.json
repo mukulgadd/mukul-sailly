@@ -1,0 +1,7 @@
+{
+  "task_id": "task-wedding-invitation",
+  "task_description": "Build a premium, mobile-first Indian wedding invitation single-page website with vanilla HTML5/CSS3/JavaScript, inspired by sadarnimantran.in. Includes 12 sections, canvas scratch card, countdown timer, scroll animations, parallax, and responsive design.",
+  "status": "pending",
+  "feature_order": ["FEAT-001", "FEAT-002"],
+  "blocked_reason": null
+}

@@ -1,0 +1,7 @@
+{
+  "task_id": "task-rebuild-wedding",
+  "task_description": "Complete rebuild of mobile-first Indian wedding invitation single-page website to exactly match the reference site at sadarnimantran.in/invite/arjun-meera. Full rewrite of index.html, css/styles.css, js/script.js with exact color palette, 5 Google Fonts, 10 sections, jhalar scalloped edges, SVG decorations, scratch-card hearts, countdown timer, RSVP WhatsApp form, and staggered scroll animations. Images already downloaded.",
+  "status": "pending",
+  "feature_order": ["FEAT-001", "FEAT-002"],
+  "blocked_reason": null
+}
